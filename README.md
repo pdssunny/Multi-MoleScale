@@ -17,6 +17,7 @@ Dependencies:
 ##  How to run
 
 "GCL-pretrain" is used to conduct graph pre-training experiments, and the dataset for graph pre-training is from data/pretrain-data.csv.
+
 'PropertyPred.ipynb' is used to conduct experiment of molecular properties.
 
 Remember to change all file path to the path in your system.
