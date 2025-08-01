@@ -44,7 +44,7 @@ Multi-MoleScale/
 │   ├── eval        # GCL pre-training script
 │   └── models      # GNN encoder for graph embeddings
 ├── PropertyPred.ipynb      # Main notebook for molecular property prediction
-├── gclModel.rar            # Pre-trained GCL model (extract before use)
+├── gclModel                # Pre-trained GCL model (extract before use)
 └── README.md               # This file
 ```
 
@@ -55,16 +55,16 @@ Multi-MoleScale/
 To reproduce the GCL pre-training:
 ```bash
 cd GCL-pretrain
-python gcl_train.py --data ../data/pretrain-data.csv --output ../gclModel.rar
+python gcl_train.py --data ../data/pretrain-data.csv --output ../gclModel
 ```
 - Uses multi-scale data augmentation (Node Dropping, Edge Perturbation, Feature Masking, Random Walk Subgraphs).
-- Saves the pre-trained model to `gclModel.rar`.
+- Saves the pre-trained model to `gclModel`.
 
 
 ### 2. Molecular Property Prediction
 Open `PropertyPred.ipynb` in Jupyter Notebook and follow these steps:
 1. **Configure Paths**: Update file paths to point to your local dataset and model directories.
-2. **Load Pre-trained Models**: Load the pre-trained GCL model (`gclModel.rar`) and BERT model.
+2. **Load Pre-trained Models**: Load the pre-trained GCL model (`gclModel`) and BERT model.
 3. **Run Experiments**: Execute the notebook to train and evaluate on:
    - Molecular property datasets (classification/regression tasks).
    - ADMET datasets.
